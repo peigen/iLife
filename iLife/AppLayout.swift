@@ -7,7 +7,7 @@
 //
 
 class AppLayout: UICollectionViewFlowLayout
-{ 
+{
     
     func initParam()
     {
