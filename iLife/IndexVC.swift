@@ -71,9 +71,13 @@ class IndexVC: BaseVC,UIAlertViewDelegate,UIScrollViewDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		initComponent()
-		var secondVC = storyBoardController("SecondVC") as SecondVC
+		//var secondVC = storyBoardController("SecondVC") as SecondVC
 		
-		navigationController.pushViewController(secondVC, animated: true)
+		//navigationController.pushViewController(secondVC, animated: true)
+        
+        var appsVC = storyBoardController("AppsVC") as AppsVC
+        
+        YJApp.cleanUpNC!.pushViewController(appsVC, animated: true)
 	}
 
 	override func didReceiveMemoryWarning() {
