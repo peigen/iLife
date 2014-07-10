@@ -16,6 +16,8 @@ class AppsVC : BaseVC,UICollectionViewDelegate,UICollectionViewDataSource
     {
         super.viewDidLoad()
         
+        customizeRightBarItemWithTarget(self, action: Selector("rightButtonPress:"),title: "通讯录")
+        
         var layout = AppLayout()
         layout.initParam()
         
@@ -29,22 +31,29 @@ class AppsVC : BaseVC,UICollectionViewDelegate,UICollectionViewDataSource
         appsView.backgroundColor = UIColor.clearColor()
         self.view.addSubview(appsView)
         
-        MyApps().detectAppDictionariesWithIncremental(
-            {
-                appDictionaries in
-                
-            }, withSuccess:
-            {
-                appDictionaries in
-                self.dicApps.addObjectsFromArray(appDictionaries)
+        SVProgressHUD.showWithStatus("初始化中...")
+        
+        MyApps().detectAppSchemes({
+                appDic in
+                SVProgressHUD.dismiss()
+                self.dicApps.addObjectsFromArray(appDic)
                 self.appsView.reloadData()
-            }
-            , withFailure: {
-                error in
+                //println(self.dicApps)
             
+            },failApp:
+            {
+                error in
+                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+                println(error)
             })
+ 
     }
     
+    override func rightButtonPress(sender:AnyObject?)
+    {
+        var adBook = storyBoardController("ADBookVC") as ADBookVC
+        YJApp.cleanUpNC!.pushViewController(adBook, animated: true)
+    }
     
     func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int
     {
@@ -67,6 +76,10 @@ class AppsVC : BaseVC,UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!)
     {
+        var selApp = dicApps.objectAtIndex(indexPath.row*(indexPath.section+1)) as NSDictionary
         
+        var scheme = selApp.objectForKey("scheme") as String
+        sysUrl.openURLApp(scheme)
+         
     }
 }

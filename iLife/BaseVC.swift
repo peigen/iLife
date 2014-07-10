@@ -71,7 +71,7 @@ class BaseVC:UIViewController {
 		
 	}
 	
-	//右导航
+	//右导航图片
 	func customizeRightBarItemWithTarget(target: AnyObject?, action: Selector, imgNormal:UIImage,imgHightlight:UIImage)
 	{
 		var btn = UIButton.buttonWithType(UIButtonType.Custom) as UIButton;
@@ -83,6 +83,19 @@ class BaseVC:UIViewController {
 		var barButtonItem = UIBarButtonItem(customView: btn)
 		self.navigationItem.rightBarButtonItem = barButtonItem
 	}
+    
+    //右导航文字
+    func customizeRightBarItemWithTarget(target: AnyObject?, action: Selector,title:String)
+    {
+        var btn = UIButton.buttonWithType(UIButtonType.Custom) as UIButton;
+        btn.setTitle(title, forState: UIControlState.Normal)
+        btn.setTitleColor(UIColor.blueColor(),forState: UIControlState.Normal)
+        btn.frame = CGRectMake(0, 0, 60, 44);
+        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        btn.font = UIFont.systemFontOfSize(15);
+        var barButtonItem = UIBarButtonItem(customView: btn)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+    }
 	
 	//导航标题
 	func customizeCenterBarItem(string:String)

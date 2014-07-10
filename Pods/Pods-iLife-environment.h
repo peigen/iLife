@@ -6,6 +6,12 @@
 // project.
 
 
+// AFAddressBookManager
+#define COCOAPODS_POD_AVAILABLE_AFAddressBookManager
+#define COCOAPODS_VERSION_MAJOR_AFAddressBookManager 1
+#define COCOAPODS_VERSION_MINOR_AFAddressBookManager 0
+#define COCOAPODS_VERSION_PATCH_AFAddressBookManager 0
+
 // AFNetworking
 #define COCOAPODS_POD_AVAILABLE_AFNetworking
 #define COCOAPODS_VERSION_MAJOR_AFNetworking 2
@@ -47,4 +53,10 @@
 #define COCOAPODS_VERSION_MAJOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
+
+// SVProgressHUD
+#define COCOAPODS_POD_AVAILABLE_SVProgressHUD
+#define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
+#define COCOAPODS_VERSION_MINOR_SVProgressHUD 0
+#define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
 

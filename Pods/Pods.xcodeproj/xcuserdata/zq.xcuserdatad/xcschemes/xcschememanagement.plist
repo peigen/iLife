@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-iLife-AFAddressBookManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-iLife-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iLife-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>89FB836BC04A4368B6B23685</key>
+		<key>375BB8B83EED417F911B69F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A2FF3429D354B269539EE63</key>
+		<key>5A8790A3B99C414EA4C609CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B51BB21E91D4C29A205EE08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C33FF3AD0EA24667AB13E959</key>
 		<dict>
 			<key>primary</key>
 			<true/>
