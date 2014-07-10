@@ -77,7 +77,7 @@ class IndexVC: BaseVC,UIAlertViewDelegate,UIScrollViewDelegate {
         
         var appsVC = storyBoardController("AppsVC") as AppsVC
         
-        YJApp.cleanUpNC!.pushViewController(appsVC, animated: true)
+        YJApp.iLifeNC!.pushViewController(appsVC, animated: true)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -97,11 +97,11 @@ class IndexVC: BaseVC,UIAlertViewDelegate,UIScrollViewDelegate {
 	}
 	
 	override func viewWillAppear(animated: Bool) {
-		YJApp.cleanUpNC!.navigationBarHidden = true
+		YJApp.iLifeNC!.navigationBarHidden = true
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
-		YJApp.cleanUpNC!.navigationBarHidden = false
+		YJApp.iLifeNC!.navigationBarHidden = false
 	}
 
 }

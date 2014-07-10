@@ -13,7 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	var window: UIWindow?
-	var cleanUpNC : UINavigationController?
+	var iLifeNC : UINavigationController?
 	var coreDataHelper : CoreDataHelper = CoreDataHelper()
 	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		self.window!.backgroundColor = UIColor.whiteColor()
 //		self.window!.makeKeyAndVisible()
 		
-		cleanUpNC = window!.rootViewController as? UINavigationController;
+		iLifeNC = window!.rootViewController as? UINavigationController;
 		
 		return true
 	}
