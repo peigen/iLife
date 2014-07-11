@@ -141,5 +141,12 @@ class BaseVC:UIViewController {
 		alert.show()
 		
 	}
+	
+	// 设置layout
+	func setDefaultLayout() -> AppLayout{
+		var layout = AppLayout()
+		layout.initParam()
+		return layout;
+	}
 
 }

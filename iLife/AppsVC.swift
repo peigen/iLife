@@ -18,8 +18,7 @@ class AppsVC : BaseVC,UICollectionViewDelegate,UICollectionViewDataSource
         
         customizeRightBarItemWithTarget(self, action: Selector("rightButtonPress:"),title: "通讯录")
         
-        var layout = AppLayout()
-        layout.initParam()
+		var layout = setDefaultLayout()
         
         appsView = UICollectionView(frame: CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-20-44), collectionViewLayout: layout)
         appsView.backgroundColor = UIColor.whiteColor()
@@ -52,7 +51,7 @@ class AppsVC : BaseVC,UICollectionViewDelegate,UICollectionViewDataSource
     override func rightButtonPress(sender:AnyObject?)
     {
         var adBook = storyBoardController("ADBookVC") as ADBookVC
-        YJApp.cleanUpNC!.pushViewController(adBook, animated: true)
+        YJApp.iLifeNC!.pushViewController(adBook, animated: true)
     }
     
     func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int

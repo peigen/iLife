@@ -13,6 +13,7 @@ class IndexVC: BaseVC,UIAlertViewDelegate,UIScrollViewDelegate {
 	@IBOutlet var openTaobaoButton : UIButton
 	@IBOutlet var indexButton : UIButton
 	@IBOutlet var nextView : UIButton
+	@IBOutlet var newButton: UIButton
 
 	let homePath : String = "http://192.168.1.100:8080"
 	var path : String = "http://192.168.1.100:8080"
@@ -24,6 +25,11 @@ class IndexVC: BaseVC,UIAlertViewDelegate,UIScrollViewDelegate {
 		
 		navigationController.pushViewController(secondVC, animated: true)
 		// self.presentModalViewController(secondVC, animated: true)
+	}
+	
+	@IBAction func newAction(sender: UIButton) {
+		var appsVC = storyBoardController("AppsVC") as AppsVC
+		navigationController.pushViewController(appsVC, animated: true)
 	}
 	
 	@IBAction func onGotoAction(sender : UIButton) {
